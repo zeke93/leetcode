@@ -8,7 +8,7 @@ import java.util.HashMap;
 public class RomanToInteger {
     public int romanToInt(String s) {
         int result = 0;
-        HashMap<String, Integer> map = new HashMap() {
+        HashMap<String, Integer> roman = new HashMap() {
             {
                 put("I", 1);
                 put("V", 5);
@@ -22,12 +22,12 @@ public class RomanToInteger {
         };
         for (int i = 0; i < s.length(); i++) {
             if (i == s.length() - 1) {
-                return result + map.get("" + s.charAt(i));
+                return result + roman.get("" + s.charAt(i));
             }
-            if (map.get("" + s.charAt(i)) >= map.get("" + s.charAt(i + 1))) {
-                result += map.get("" + s.charAt(i));
+            if (roman.get("" + s.charAt(i)) >= roman.get("" + s.charAt(i + 1))) {
+                result += roman.get("" + s.charAt(i));
             } else {
-                result -= map.get("" + s.charAt(i));
+                result -= roman.get("" + s.charAt(i));
             }
         }
         return result;
