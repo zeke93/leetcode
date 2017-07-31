@@ -5,6 +5,7 @@ package cn.hackcoder;
  */
 public class AddBinary {
     public String addBinary(String a, String b) {
+
         String sum = "";
         int n = a.length();
         int m = b.length();
