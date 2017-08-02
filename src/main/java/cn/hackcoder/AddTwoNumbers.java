@@ -5,13 +5,14 @@ package cn.hackcoder;
  */
 public class AddTwoNumbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        ListNode result = l1 != null ? l1 : l2;
-        int carryFlag = 0;
-        ListNode last = null;
+        ListNode result = l1 != null ? l1 : l2;//返回结果
+        int carryFlag = 0;//进位
+        ListNode last = null;//最后的结点
         while (l1 != null && l2 != null) {
             int val = l1.val + l2.val;
             l1.val = (val + carryFlag) % 10;
             carryFlag = (val + carryFlag) / 10;
+
             last = l1;
             l1 = l1.next;
             l2 = l2.next;
@@ -21,6 +22,7 @@ public class AddTwoNumbers {
             int val = (l1.val + carryFlag) % 10;
             carryFlag = (l1.val + carryFlag) / 10;
             l1.val = val;
+
             last.next = l1;
             last = l1;
             l1 = l1.next;
@@ -30,6 +32,7 @@ public class AddTwoNumbers {
             int val = (l2.val + carryFlag) % 10;
             carryFlag = (l2.val + carryFlag) / 10;
             l2.val = val;
+
             last.next = l2;
             last = l2;
             l2 = l2.next;

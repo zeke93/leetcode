@@ -5,7 +5,7 @@ package cn.hackcoder;
  */
 public class PowerOfTwo {
     public boolean isPowerOfTwo(int n) {
-        double num = n;
+        int num = n;
         while (num >= 2) {
             if (num % 2 != 0) return false;
             num /= 2;
