@@ -5,7 +5,7 @@ package cn.hackcoder;
  */
 public class PlusOne {
     public int[] plusOne(int[] digits) {
-        int flag = 1;
+        int flag = 1;//进位标志
         for (int i = digits.length - 1; i >= 0; i--) {
             if (digits[i] + flag >= 10) {
                 digits[i] = (digits[i] + flag) % 10;
@@ -15,6 +15,7 @@ public class PlusOne {
                 flag = 0;
             }
         }
+
         if (flag == 1) {
             int[] results = new int[digits.length + 1];
             results[0] = 1;
