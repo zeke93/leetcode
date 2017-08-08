@@ -1,17 +1,18 @@
 package cn.hackcoder;
 
-import java.util.Arrays;
-import java.util.Stack;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by thinsky on 2017/8/1.
  */
 public class Solution {
-    public int majorityElement(int[] nums) {
-        Arrays.sort(nums);
-        return nums[nums.length / 2];
+    public boolean containsDuplicate(int[] nums) {
+        Set<Integer> set = new HashSet();
+        for (int num : nums) {
+            if (!set.add(num)) return true;
+        }
+        return false;
     }
 
 }
