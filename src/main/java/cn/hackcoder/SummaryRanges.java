@@ -1,14 +1,13 @@
 package cn.hackcoder;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 /**
- * Created by thinsky on 2017/8/1.
+ * Created by linzhichao on 2017/8/10.
  */
-public class Solution {
+public class SummaryRanges {
+
     public List<String> summaryRanges(int[] nums) {
         int last = Integer.MIN_VALUE;
         List<String> result = new ArrayList<>();
@@ -27,6 +26,11 @@ public class Solution {
             last = num;
             isFirst = false;
         }
+
         return result;
+    }
+
+    public static void main(String[] args) {
+        new SummaryRanges().summaryRanges(new int[]{0, 1, 2, 4, 5, 7}).forEach(System.out::println);
     }
 }
