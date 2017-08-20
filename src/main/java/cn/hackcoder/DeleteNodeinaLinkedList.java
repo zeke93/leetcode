@@ -14,11 +14,11 @@ public class DeleteNodeinaLinkedList {
     }
 
     public void deleteNode(ListNode node) {
-        if (node == null)return;
-        ListNode next = node.next;
-        if (next != null){
-            node.val = next.val;
-            node.next = next.next;
+        if (node != null) {
+            node.val = node.next.val;
+            node.next = node.next.next;
         }
     }
+
+
 }
