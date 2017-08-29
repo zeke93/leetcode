@@ -18,7 +18,7 @@ public class HappyNumber {
         for (int fact : facts) {
             result += fact * fact;
         }
-        if (result < 10 && result != 1){
+        if (result < 10 && result != 1) {
             return false;
         }
         return isHappy(result);
