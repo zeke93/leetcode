@@ -1,12 +1,9 @@
 package cn.hackcoder;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
- * Created by thinsky on 2017/8/1.
+ * Created by linzhichao on 2017/9/4.
  */
-public class Solution {
+public class ValidateIPAddress {
     public String validIPAddress(String IP) {
         if (IP.matches(".*[.:]$|^[.:].*")) return "Neither";
         String[] ipv4Strs = IP.split("\\.");
@@ -27,5 +24,18 @@ public class Solution {
             return "IPv6";
         }
         return "Neither";
+    }
+
+    public static void main(String[] args) {
+//        System.out.println(new ValidateIPAddress().validIPAddress("172.16.254.1"));
+//        System.out.println(new ValidateIPAddress().validIPAddress("172.16.254.01"));
+//        System.out.println(new ValidateIPAddress().validIPAddress("2001:0db8:85a3:0:0:8A2E:0370:7334"));
+//        System.out.println(new ValidateIPAddress().validIPAddress("256.256.256.256"));
+//        System.out.println(new ValidateIPAddress().validIPAddress("1e1.4.5.6"));
+//        System.out.println(new ValidateIPAddress().validIPAddress("12..33.4"));
+//        System.out.println(new ValidateIPAddress().validIPAddress("2001:0db8:85a3:0:0:8A2E:0370:7334:"));
+//        System.out.println(new ValidateIPAddress().validIPAddress("20EE:FGb8:85a3:0:0:8A2E:0370:7334"));
+//        System.out.println(new ValidateIPAddress().validIPAddress("2001:0db8:85a3:0:0:8A2E:0370:7334"));
+        System.out.println(new ValidateIPAddress().validIPAddress("192.0.0.1"));
     }
 }
