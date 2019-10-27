@@ -29,6 +29,7 @@ public class BinaryTreeZigzagLevelOrderTraversal {
 
         while (!queue.isEmpty()) {
             TreeNode node = queue.poll();
+            System.out.println(node.val);
             Integer level = nodeLevelMap.get(node);
 
             if (results.size() < level) {
